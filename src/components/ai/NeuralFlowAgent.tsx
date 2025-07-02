@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -42,7 +41,7 @@ const NeuralFlowAgent = ({ isOpen, onClose }: NeuralFlowAgentProps) => {
 
   const getGeminiResponse = async (userMessage: string): Promise<string> => {
     try {
-      const genAI = new GoogleGenerativeAI('AIzaSyB-41fi5DBwYhi7h1SwNPYx7pEXCpyUu8w');
+      const genAI = new GoogleGenerativeAI('AIzaSyCt9NhqRxvbZEHAKDg5wosdCY7i38qxWk8');
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       const context = `You are Neural Flow AI Assistant. Keep responses to 2-4 lines maximum. Neural Flow specializes in AI automation: chatbots, process automation, data analytics, custom AI solutions. We serve Real Estate, Manufacturing, E-commerce, Healthcare, Education, Finance, Automotive, Logistics. Pricing: $5,000-$50,000+. Implementation: 2-8 weeks. Contact: neuralflow.cloud@gmail.com, WhatsApp: +92 310 5163094.`;

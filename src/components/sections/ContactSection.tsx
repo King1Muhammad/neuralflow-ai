@@ -249,7 +249,7 @@ Sent from Neural Flow Contact Form
 
           <Card className="bg-glass border-green-500/20 hover:border-green-500/50 transition-all duration-300 group scroll-reveal">
             <CardContent className="p-4 sm:p-6 text-center">
-              <div className="text-green-500 mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div className="mx-auto mb-4 group-hover:scale-110 transition-transform text-green-500 flex items-center justify-center">
                 <FiverrIcon />
               </div>
               <h3 className="font-bold text-white mb-2 text-sm sm:text-base">Fiverr</h3>
@@ -266,7 +266,7 @@ Sent from Neural Flow Contact Form
 
           <Card className="bg-glass border-green-600/20 hover:border-green-600/50 transition-all duration-300 group scroll-reveal">
             <CardContent className="p-4 sm:p-6 text-center">
-              <div className="text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div className="mx-auto mb-4 group-hover:scale-110 transition-transform text-green-600 flex items-center justify-center">
                 <UpworkIcon />
               </div>
               <h3 className="font-bold text-white mb-2 text-sm sm:text-base">Upwork</h3>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ThreeScene from '../ThreeScene';
 import NeuralFlowAgent from '../ai/NeuralFlowAgent';
@@ -22,7 +21,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <ThreeScene />
             <div className="absolute inset-0 bg-dark-purple/50"></div>

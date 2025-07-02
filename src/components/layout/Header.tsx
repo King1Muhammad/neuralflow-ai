@@ -10,7 +10,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', id: 'hero-section' },
     { name: 'Services', id: 'services-section' },
     { name: 'About', id: 'about-section' },
     { name: 'Contact', id: 'contact-section' }
@@ -18,9 +18,7 @@ const Header = () => {
 
   const handleNavClick = (item) => {
     setIsMobileMenuOpen(false);
-    if (item.path) {
-      window.location.href = item.path;
-    } else if (item.id) {
+    if (item.id) {
       const section = document.getElementById(item.id);
       if (section) {
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -45,23 +43,13 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               {navItems.map((item) => (
-                item.path ? (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    className="text-foreground/80 hover:text-white transition-colors duration-300 cursor-pointer"
-                  >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.name}
-                    onClick={() => handleNavClick(item)}
-                    className="text-foreground/80 hover:text-white transition-colors duration-300 cursor-pointer"
-                  >
-                    {item.name}
-                  </button>
-                )
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item)}
+                  className="text-foreground/80 hover:text-white transition-colors duration-300 cursor-pointer"
+                >
+                  {item.name}
+                </button>
               ))}
             </nav>
             
@@ -106,23 +94,13 @@ const Header = () => {
             <div className="lg:hidden mt-2 glass-card p-6">
               <nav className="flex flex-col space-y-4 mb-6">
                 {navItems.map((item) => (
-                  item.path ? (
-                    <Link
-                      key={item.name}
-                      to={item.path}
-                      className="text-foreground/80 hover:text-white transition-colors text-left"
-                    >
-                      {item.name}
-                    </Link>
-                  ) : (
-                    <button
-                      key={item.name}
-                      onClick={() => handleNavClick(item)}
-                      className="text-foreground/80 hover:text-white transition-colors text-left"
-                    >
-                      {item.name}
-                    </button>
-                  )
+                  <button
+                    key={item.name}
+                    onClick={() => handleNavClick(item)}
+                    className="text-foreground/80 hover:text-white transition-colors text-left"
+                  >
+                    {item.name}
+                  </button>
                 ))}
               </nav>
               <div className="flex flex-col gap-3">
